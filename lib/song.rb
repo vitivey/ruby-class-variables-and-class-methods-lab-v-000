@@ -19,8 +19,10 @@ attr_reader :name, :artist, :genre
   end
 
   def self.artists
-    @@artists.each do |artist_name|
-      @@artists.select{|x| x == artist_name}.size
+    i=0
+    while i < @@artists.size
+      @@artists.delete(@@artists[i]) if @@artists.select {|name| name == @@artists[i]}.size >1
+      i+=1
     end
   end
 
