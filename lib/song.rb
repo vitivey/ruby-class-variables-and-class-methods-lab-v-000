@@ -28,7 +28,10 @@ attr_reader :name, :artist, :genre
   end
 
   def self.genres
-    @@genres
+    @@unique_genres=[]
+    @@genres.map do |category|
+      @@unique_genres << category if !unique_genres.include?(category)
+    end
   end
 
   def self.genre_count
