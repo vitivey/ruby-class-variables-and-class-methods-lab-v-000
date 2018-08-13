@@ -35,4 +35,29 @@ attr_reader :name, :artist, :genre
     @@unique_genres
   end
 
-  
+  def self.genre_count
+    self.genres
+   @@genre_count={}
+   i=0
+     while i < @@unique_genres.size
+     count = @@genres.select {|genre| genre == @@unique_genres[i]}.size
+     @@genre_count[@@unique_genres[i]]=count
+     i+=1
+     end
+   @@genre_count
+ end
+
+
+  def self.artist_count
+    #   self.artists
+    #  @@artist_count={}
+    #  i=0
+    #    while i < @@unique_artists.size
+    #    count = @@artists.select {|artist| artist == @@unique_artists[i]}.size
+    #    @@artist_count[@@unique_artists[i]]=count
+    #    i+=1
+    #    end
+    #  @@artist_count
+  end
+
+end
