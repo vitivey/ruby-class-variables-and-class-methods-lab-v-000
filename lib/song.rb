@@ -29,5 +29,5 @@ attr_reader :name, :artist, :genre
 
   def self.artist_count
   end
-  
+
 end
