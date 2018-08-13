@@ -6,7 +6,7 @@ attr_reader :name, :artist, :genre
 @@genres=[]
   def initialize(name, artist, genre)
     @name=name
-    @@artist=artist
+    @artist=artist
     @genre=genre
 
     @@artists << artist
