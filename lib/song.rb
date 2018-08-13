@@ -32,7 +32,7 @@ attr_reader :name, :artist, :genre
     @@genres.map do |category|
       binding.pry
 
-      @@unique_genres << category if !unique_genres.include?(category)
+      @@unique_genres << category if !@@unique_genres.include?(category)
     end
   end
 
