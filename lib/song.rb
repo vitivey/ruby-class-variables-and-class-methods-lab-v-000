@@ -19,12 +19,11 @@ attr_reader :name, :artist, :genre
   end
 
   def self.artists
-    i=0
-    while i < @@artists.size
-      @@artists.delete(@@artists[i]) if @@artists.select {|name| name == @@artists[i]}.size >1
-      i+=1
+    @@unique_artists=[]
+    @@artists.map do |name|
+      @@unique_artists << name if !@@unique_artists.include?(name)
     end
-    @@artists
+    @@unique_artists
   end
 
   def self.genres
