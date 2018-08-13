@@ -1,3 +1,4 @@
+require "pry"
 class Song
 attr_reader :name, :artist, :genre
 @@count=0
@@ -21,6 +22,7 @@ attr_reader :name, :artist, :genre
     @@artists.each do |name|
       @@artists.delete(name) if @@artists.select{|x| x == name}.size > 1
     end
+    binding.pry
   end
 
   def self.genres
