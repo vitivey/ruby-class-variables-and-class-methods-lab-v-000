@@ -10,6 +10,7 @@ attr_reader :name, :artist, :genre
 
     @@artists << artist
     @@genres << genre
+    @@count+=1
   end
 
   def self.count
@@ -17,7 +18,9 @@ attr_reader :name, :artist, :genre
   end
 
   def self.artists
-    @@artists
+    @@artists.each do |name|
+      @@artists.delete(name) if @@artists.select{|x| x == name}.size > 1
+    end
   end
 
   def self.genres
