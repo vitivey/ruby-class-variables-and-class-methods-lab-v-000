@@ -20,7 +20,7 @@ attr_reader :name, :artist, :genre
 
   def self.artists
     @@artists.each do |artist_name|
-      @@artists.delete(artists_name) if @@artists.select{|x| x == artist_name}.size > 1
+      @@artists.select{|x| x == artist_name}.size
     end
   end
 
