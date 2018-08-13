@@ -32,7 +32,7 @@ attr_reader :name, :artist, :genre
     @@genres.map do |category|
       @@unique_genres << category if !@@unique_genres.include?(category)
     end
-    binding.pry
+    @@unique_genres
   end
 
   def self.genre_count
