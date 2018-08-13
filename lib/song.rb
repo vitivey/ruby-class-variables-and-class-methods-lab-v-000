@@ -24,7 +24,7 @@ attr_reader :name, :artist, :genre
       @@artists.delete(@@artists[i]) if @@artists.select {|name| name == @@artists[i]}.size >1
       i+=1
     end
-    binding.pry
+    # binding.pry
   end
 
   def self.genres
