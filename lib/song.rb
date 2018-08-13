@@ -13,6 +13,7 @@ attr_reader :name, :artist, :genre
     @@genres << genre
     @@count+=1
   end
+  binding.pry
 
   def self.count
     @@count
@@ -41,5 +42,4 @@ attr_reader :name, :artist, :genre
 
   def self.artist_count
   end
-binding.pry
 end
